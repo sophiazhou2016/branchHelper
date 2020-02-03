@@ -2,7 +2,7 @@
 const execSync = require('child_process').execSync;
 const program = require('commander'); // 命令参数处理
 const version = require('./package').version
-program.version(version).parse(process.argv);
+program.version(version, '-v --version').parse(process.argv);
 let branchName = process.argv[2];
 if (!branchName) {
     console.log('请输入版本号')
